@@ -20,136 +20,199 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>
-					Beautiful presentations
-				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
+				<h1>Ввод и вывод данных</h1>
+				<img class="r-stretch" alt="ktkv-presentations.github.io/algos-6" data-type="qrcode">
 			</section>
 			<section>
 				<section>
-					<h1>Tailwind CSS</h1>
-					<div class="grid grid-cols-2 gap-8">
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-					</div>
-				</section>
-				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-					</div>
-				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
-					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+					<h1>
+						Оператор присваивания
+					</h1>
+					<p>Оператор присваивания в Python обозначается символом <code class="python">=</code> и используется для
+						связывания значения с переменной</p>
+					<pre><code class="python" data-trim data-noescape>
+a = 5
+b = "Привет, мир!"
 					</code></pre>
 				</section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+				<section>
+					<h1>
+						Левостороннее и правостороннее выражения
+					</h1>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-r">
+							<div>
+								<h4>Левостороннее выражение</h4>
+								<p>переменная, которой присваивается значение</p>
+							</div>
+						</div>
+						<div></div>
+					</div>
+					<h2><span style="color: var(--red)">x</span> = 10 + 5</h2>
+				</section>
+				<section>
+					<h1>
+						Левостороннее и правостороннее выражения
+					</h1>
+					<div class="grid grid-cols-2 gap-4">
+						<div></div>
+						<div class="border-r">
+							<div>
+								<h4>Правостороннее выражение</h4>
+								<p>
+									значение или выражение, результат которого присваивается переменной
+								</p>
+							</div>
+						</div>
+					</div>
+					<h2>x = <span style="color: var(--red)">10 + 5</span></h2>
+				</section>
+				<section>
+					<h1>Множественное присваивание</h1>
+					<p>возможность присваивать значения сразу нескольким переменным в одной строке</p>
+					<pre><code class="python" data-trim data-noescape>
+a = b = c = 10
+
+x, y, z = 1, 2, 3
+# одинаково, что
+x = 1
+y = 2
+z = 3
+					</code></pre>
 				</section>
 			</section>
 			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
+				<h1>Правила именования переменных</h1>
+				<ul>
+					<li>Переменные должны начинаться с буквы или символа подчёркивания <code class="python">_</code></li>
+					<li>Переменные не могут начинаться с цифры</li>
+					<li>В имени переменной могут быть использованы только буквы, цифры и символ подчёркивания</li>
+					<li>Имена переменных чувствительны к регистру, то есть my_var и my_Var — это разные переменные</li>
+				</ul>
+				<pre><code class="python" data-trim data-noescape>
+user_name = "Alice"
+_age = 25
+score1 = 100
+					</code></pre>
 			</section>
 			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
-			</section>
-			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section>
+					<h1>Ввод данных</h1>
+					<p>процесс получения информации от <code class="plaintext">пользователя</code>, <code
+							class="plaintext">файла</code> или <code class="plaintext">другого источника</code></p>
+				</section>
+				<section>
+					<h1>Функция input()</h1>
+					<div>позволяет программе взаимодействовать с пользователем, запрашивая ввод данных через консоль</div>
+					<br>
+					<h5>Синтаксис</h5>
+					<pre><code class="python" data-trim data-noescape>
+variable = input("Сообщение для пользователя: ")
+					</code></pre>
+					<p>где <code class="python">Сообщение для пользователя</code> — это строка, которая выводится на экран перед
+						вводом данных.
+						<code class="python">variable</code> — переменная, которая хранит введённые пользователем данные
+					</p>
+					<h6>Особенности</h6>
+					<ul>
+						<li>Останавливает выполнение программы и выводит сообщение, ожидая ввода данных от пользователя</li>
+						<li>Возвращает введённые данные в виде строки</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Пример использования</h1>
+					<pre><code class="python" data-trim data-noescape>
+name = input("Введите ваше имя: ")
+print("Привет,", name)
+					</code></pre>
+				</section>
+				<section>
+					<h1>Будет ли работать этот код?</h1>
+					<pre><code class="python" data-trim data-noescape>
+import random
+
+answer = random.randint(0, 20)
+guessed_number = input("Введите число: ")
+
+if guessed_number == answer:
+	print("Вы угадали!")
+else:
+    print("Вы не угадали")
+					</code></pre>
+				</section>
+				<section>
+					<div class="border-r">Возвращает введённые данные в виде строки</div>
+				</section>
+				<section>
+					<h1>Будет ли работать этот код?</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+import random
+
+answer = random.randint(0, 20)
+guessed_number = input("Введите число: ")
+
+if guessed_number == answer:
+	print("Вы угадали!")
+else:
+    print("Вы не угадали")
+
+# Traceback (most recent call last):
+#   File "/home/pasha/test.py", line 4, in module
+#     guessed_number = int(input("Введите число: "))
+#                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# ValueError: invalid literal for int() with base 10: 'd'
+					</code></pre>
+				</section>
+				<section>
+					<h1>Обработка ошибок при вводе</h1>
+					<p>
+						Для избежания ошибок при вводе неправильных данных используется конструкция try-except
+					</p>
+					<pre><code class="python" data-trim data-noescape>
+try:
+    age = int(input("Введите ваш возраст: "))
+    print(f"Через год вам будет {age + 1}")
+except ValueError:
+    print("Ошибка! Введите числовое значение.")
+					</code></pre>
+					<p>Где <code class="python">ValueError</code> - тип ошибки (исключения) в Python, который возникает, когда
+						функция или операция получает аргумент правильного типа, но с некорректным значением</p>
+				</section>
+				<section>
+					<pre><code class="python" data-trim data-noescape>
+import random
+
+answer = random.randint(0, 20)
+try:
+    guessed_number = int(input("Введите число: "))
+
+    if guessed_number == answer:
+        print("Вы угадали!")
+    else:
+        print("Вы не угадали")
+except ValueError:
+    print("Ошибка: нужно ввести целое число")
+					</code></pre>
+				</section>
+				<section>
+					<h1>Ввод нескольких значений</h1>
+					<p>Для этого можно воспользоваться методом разделения строки split()</p>
+					<pre><code class="python" data-trim data-noescape>
+a, b = input("Введите два числа через пробел: ").split()
+a = int(a)
+b = int(b)
+print(f"Сумма чисел: {a + b}")
+					</code></pre>
+				</section>
+				<section><h1>Обработка ввода строк с использованием методов строк</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+name = input("Введите ваше имя: ").lower() # "Паша"
+print(name) # "паша"
+
+word = input("Введите слово: ").strip() # " Hello world!  "
+print(word) # "Hello world!"
+					</code></pre>
+				</section>
 			</section>
 		</div>
 	</div>
@@ -172,22 +235,22 @@ var foo = {
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
 		// - https://revealjs.com/config/
-		
+
 		const colors = {
-    blue0: 'rgb(61, 89, 161)',
-    blue: 'rgb(122, 162, 247)',
-    cyan: 'rgb(125, 207, 255)',
-    magenta: 'rgb(187, 154, 247)',
-    orange: 'rgb(255, 158, 100)',
-    yellow: 'rgb(224, 175, 104)',
-    green: 'rgb(158, 206, 106)',
-    teal: 'rgb(26, 188, 156)',
-    red: 'rgb(255, 117, 127)',
-    red1: 'rgb(219, 75, 75)',
-    fg: 'rgb(192, 202, 245)',
-    bg: 'rgb(26, 27, 38)',
-		transparent: "#00000000"
-};
+			blue0: 'rgb(61, 89, 161)',
+			blue: 'rgb(122, 162, 247)',
+			cyan: 'rgb(125, 207, 255)',
+			magenta: 'rgb(187, 154, 247)',
+			orange: 'rgb(255, 158, 100)',
+			yellow: 'rgb(224, 175, 104)',
+			green: 'rgb(158, 206, 106)',
+			teal: 'rgb(26, 188, 156)',
+			red: 'rgb(255, 117, 127)',
+			red1: 'rgb(219, 75, 75)',
+			fg: 'rgb(192, 202, 245)',
+			bg: 'rgb(26, 27, 38)',
+			transparent: "#00000000"
+		};
 
 		Reveal.initialize({
 			hash: true,
