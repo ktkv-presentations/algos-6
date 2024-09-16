@@ -35,7 +35,7 @@ a = 5
 b = "Привет, мир!"
 					</code></pre>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<h1>
 						Левостороннее и правостороннее выражения
 					</h1>
@@ -44,13 +44,14 @@ b = "Привет, мир!"
 							<div>
 								<h4>Левостороннее выражение</h4>
 								<p>переменная, которой присваивается значение</p>
+								<br>
 							</div>
 						</div>
 						<div></div>
 					</div>
 					<h2><span style="color: var(--red)">x</span> = 10 + 5</h2>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<h1>
 						Левостороннее и правостороннее выражения
 					</h1>
@@ -67,18 +68,33 @@ b = "Привет, мир!"
 					</div>
 					<h2>x = <span style="color: var(--red)">10 + 5</span></h2>
 				</section>
-				<section>
+				<section data-auto-animate="">
 					<h1>Множественное присваивание</h1>
 					<p>возможность присваивать значения сразу нескольким переменным в одной строке</p>
-					<pre><code class="python" data-trim data-noescape>
+					<div class="grid grid-cols-2 gap-4">
+						<pre data-id="code1"><code class="python" data-trim data-noescape>
 a = b = c = 10
-
+					</code></pre>
+						<pre data-id="code2"><code class="python" data-trim data-noescape>
 x, y, z = 1, 2, 3
-# одинаково, что
+					</code></pre>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h1>Множественное присваивание</h1>
+					<p>возможность присваивать значения сразу нескольким переменным в одной строке</p>
+					<div class="grid grid-cols-2 gap-4">
+						<pre data-id="code1"><code class="python" data-trim data-noescape>
+a = 10
+b = 10
+c = 10
+					</code></pre>
+						<pre data-id="code2"><code class="python" data-trim data-noescape>
 x = 1
 y = 2
 z = 3
 					</code></pre>
+					</div>
 				</section>
 			</section>
 			<section>
@@ -126,33 +142,74 @@ name = input("Введите ваше имя: ")
 print("Привет,", name)
 					</code></pre>
 				</section>
-				<section>
+				<section data-auto-animate="">
 					<h1>Будет ли работать этот код?</h1>
-					<pre><code class="python" data-trim data-noescape>
+					<pre data-id="code"><code class="python" data-line-numbers="1-9|1|3|4|6-9|1-9" data-trim data-noescape>
 import random
 
 answer = random.randint(0, 20)
 guessed_number = input("Введите число: ")
 
 if guessed_number == answer:
-	print("Вы угадали!")
+		print("Вы угадали!")
 else:
     print("Вы не угадали")
 					</code></pre>
 				</section>
-				<section>
-					<div class="border-r">Возвращает введённые данные в виде строки</div>
+				<section data-auto-animate="">
+					<div class="border-r"><span class="text-4xl" style="color: var(--red);"></span> input() возвращает введённые
+						данные в виде строки</div>
+					<pre data-id="code"><code class="python" data-line-numbers  data-trim data-noescape>
+import random
+
+answer = 5
+guessed_number = "5"
+
+if "5" == 5:
+		print("Вы угадали!")
+else:
+    print("Вы не угадали")
+					</code></pre>
 				</section>
-				<section>
-					<h1>Будет ли работать этот код?</h1>
-					<pre><code class="python r-stretch" data-trim data-noescape>
+				<section data-auto-animate="">
+					<div class="border-y"><span class="text-4xl" style="color: var(--yellow);"></span> давайте превратим строку в
+						число</div>
+					<pre data-id="code1"><code class="python r-stretch" data-line-numbers="1-9|4" data-trim data-noescape>
 import random
 
 answer = random.randint(0, 20)
-guessed_number = input("Введите число: ")
+guessed_number = int(input("Введите число: "))
 
 if guessed_number == answer:
-	print("Вы угадали!")
+		print("Вы угадали!")
+else:
+    print("Вы не угадали")
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1 data-id="h1">Да</h1>
+					<pre data-id="code1"><code class="python r-stretch" data-line-numbers="" data-trim data-noescape>
+import random
+
+answer = 5
+guessed_number = int("5")
+
+if 5 == 5:
+		print("Вы угадали!")
+else:
+    print("Вы не угадали")
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1 data-id="h1">Да, но...</h1>
+					<pre data-id="code1"><code class="python r-stretch" data-line-numbers="" data-trim data-noescape>
+import random
+
+answer = 5
+guessed_number = int("Че по кайфу, то и делаю")
+
+if guessed_number == answer:
+		print("Вы угадали!")
 else:
     print("Вы не угадали")
 
@@ -166,17 +223,15 @@ else:
 				<section>
 					<h1>Обработка ошибок при вводе</h1>
 					<p>
-						Для избежания ошибок при вводе неправильных данных используется конструкция try-except
+						Для избежания ошибок при вводе неправильных данных используется конструкция <code
+							class="python">try-except</code>
 					</p>
 					<pre><code class="python" data-trim data-noescape>
 try:
-    age = int(input("Введите ваш возраст: "))
-    print(f"Через год вам будет {age + 1}")
+		# Код который может вызвать ошибку
 except ValueError:
-    print("Ошибка! Введите числовое значение.")
+    # Код, который произойдет в случае ошибки
 					</code></pre>
-					<p>Где <code class="python">ValueError</code> - тип ошибки (исключения) в Python, который возникает, когда
-						функция или операция получает аргумент правильного типа, но с некорректным значением</p>
 				</section>
 				<section>
 					<pre><code class="python" data-trim data-noescape>
@@ -193,6 +248,46 @@ try:
 except ValueError:
     print("Ошибка: нужно ввести целое число")
 					</code></pre>
+					<p>Где <code class="python">ValueError</code> - тип ошибки (исключения) в Python, который возникает, когда
+						функция или операция получает аргумент правильного типа, но с некорректным значением</p>
+				</section>
+				<section>
+					<pre><code class="python" data-trim data-noescape>
+def my_function():
+    try:
+        print("Starting the function...")
+    except Exception as e:
+        print(f"Error: {e}")
+
+    try:
+        result = 10 / 0
+        print(result)
+    except ZeroDivisionError as e:
+        print(f"Error: Cannot divide by zero! {e}")
+
+    try:
+        my_list = [1, 2, 3]
+        print(my_list[5])
+    except IndexError as e:
+        print(f"Error: Index out of range! {e}")
+
+    try:
+        import nonexistent_module
+    except ImportError as e:
+        print(f"Error: Module not found! {e}")
+
+    try:
+        name = "Alice" + 5
+    except TypeError as e:
+        print(f"Error: Cannot concatenate string and int! {e}")
+
+    try:
+        undefined_variable
+    except NameError as e:
+        print(f"Error: Variable not defined! {e}")
+					</code></pre>
+					<h4>Когда пытаешься покрыть эксепшенами весь код</h4>
+					<img class="r-stretch" src="https://media0.giphy.com/media/l4FATJpd4LWgeruTK/giphy.gif" alt="">
 				</section>
 				<section>
 					<h1>Ввод нескольких значений</h1>
@@ -204,13 +299,111 @@ b = int(b)
 print(f"Сумма чисел: {a + b}")
 					</code></pre>
 				</section>
-				<section><h1>Обработка ввода строк с использованием методов строк</h1>
+			</section>
+			<section>
+				<section data-auto-animate="">
+					<h1>Нормализация данных при вводе</h1>
+					<p>процесс приведения данных к определённому стандарту или формату перед их использованием или хранением</p>
+					<div>
+						<code class="python">"   Паша  " != "паша"</code>
+					</div>
+				</section>
+				<section>
+					<h1>Обработка ввода строк с использованием методов строк</h1>
 					<pre><code class="python r-stretch" data-trim data-noescape>
 name = input("Введите ваше имя: ").lower() # "Паша"
 print(name) # "паша"
 
 word = input("Введите слово: ").strip() # " Hello world!  "
 print(word) # "Hello world!"
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Вывод данных</h1>
+					<p>процесс отображения информации, который программа отправляет пользователю или другим программным
+						компонентам
+					</p>
+				</section>
+				<section data-auto-animate="">
+					<h1>print()</h1>
+					<p>выводит текстовые сообщения или значения переменных в консоль</p>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Привет, мир!")
+# Привет, мир!
+					</code></pre>
+				</section>
+				<section data-auto-animate="">
+					<h1>print()</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print(значение1, значение2, ..., значениеN, sep=' ', end='\n')
+					</code></pre>
+					<p>где <code class="python">sep=' '</code> - разделитель между выводимыми значениями, а <code
+							class="python">end='\n'</code> - символ, который будет добавлен в конце вывода</p>
+				</section>
+				<section>
+					<h1>Usecases</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+name = "Alice"
+age = 25
+print("Имя:", name, "Возраст:", age)
+# Имя: Alice Возраст: 25
+					</code></pre>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Python", "быстрый", "язык", sep='-')
+# Python-быстрый-язык
+					</code></pre>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Привет", end=", ")
+print("мир!")
+# Привет, мир!
+					</code></pre>
+				</section>
+				<section>
+					<h1>Вывод специальных символов</h1>
+					<code class="python">\n</code>
+					<div>новая строка</div>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Привет,\nмир!")
+# Привет,
+# мир!
+					</code></pre>
+				</section>
+				<section>
+					<h1>Вывод специальных символов</h1>
+					<code class="python">\t</code>
+					<div>табуляция</div>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Привет,\tмир!")
+# Привет,    мир!
+					</code></pre>
+				</section>
+				<section>
+					<h1>Вывод специальных символов</h1>
+					<code class="python">\\</code>
+					<div>обратный слэш</div>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+print("Привет,\\мир!")
+# Привет,\мир!
+					</code></pre>
+				</section>
+				<section>
+					<h1>Вывод с форматированием чисел</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+pi = 3.1415926535
+print(f"Значение Pi: {pi:.2f}")
+# Значение Pi: 3.14
+					</code></pre>
+					<p>где <code class="python">.2f</code> - указывает на количество после запятой</p>
+				</section>
+				<section>
+					<h1>
+						Вывод данных в файл
+					</h1>
+					<pre><code class="python r-stretch" data-trim data-noescape>
+with open("output.txt", "w") as f:
+    print("Привет, мир!", file=f)
 					</code></pre>
 				</section>
 			</section>
